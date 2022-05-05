@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite o seu País: <input type="text" name="txpais" id="txtpais">
+    <input type="button" value="resultado" onclick="resultado()">
+    
+    <div id="nacionalidade">
+
+    </div>
+    <script>
+       function resultado(){
+        var txtpais = document.getByElementId('txtpais');
+        var nacionalidade = document.querySelector('div#nacionalidade');
+        var resultado = String(txpais.value);
+
+        if(resultado == 'Brasil') {
+            nacionalidade.innerHTML = `voçê nasceu em ${resultado} voçê é Brasileiro(a).`;
+        } else {
+            nacionalidade.innerHTML = `Voçê nasceu em ${resultado} voçê é estrangeiro.`
+        }
+
+        nacionalidade.innerHTML = `volte sempre`;
+       }
+       
+    </script>
+</body>
+</html>
