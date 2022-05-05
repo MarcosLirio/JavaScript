@@ -19,7 +19,7 @@
         var nacionalidade = document.getElementById('nacionalidade');
         var resultado = txtpais.value;
 
-        if(resultado = 'Brasil') {
+        if(resultado == 'Brasil' || resultado == 'brasil') {
             nacionalidade.innerHTML += `<p> Voçê nasceu em ${resultado}. Voçê é Brasileiro(a). <\p>`;
         } else {
             nacionalidade.innerHTML += `<p>Voçê nasceu em ${resultado}. Voçê é estrangeiro(a).<\p>`
