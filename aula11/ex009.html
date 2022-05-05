@@ -8,27 +8,24 @@
 </head>
 <body>
     <h1>Sistema de Nacionalidade</h1>
-    Digite o seu País: <input type="text" name="txpais" id="txtpais">
-    <input type="button" value="resultado" onclick="resultado()">
-    
-    <div id="nacionalidade">
 
+    <div id="nacionalidade">
+        Digite o seu País: <input type="text" name="txpais" id="txtpais">
+        <input type="button" value="resultado" onclick="resultado()">
     </div>
     <script>
        function resultado(){
-        var txtpais = document.getByElementId('txtpais');
-        var nacionalidade = document.querySelector('div#nacionalidade');
-        var resultado = String(txpais.value);
+        var txtpais = document.getElementById('txtpais');
+        var nacionalidade = document.getElementById('nacionalidade');
+        var resultado = txtpais.value;
 
         if(resultado == 'Brasil') {
-            nacionalidade.innerHTML = `voçê nasceu em ${resultado} voçê é Brasileiro(a).`;
+            nacionalidade.innerText += `<p> Voçê nasceu em ${resultado}. Voçê é Brasileiro(a). <\p>`;
         } else {
-            nacionalidade.innerHTML = `Voçê nasceu em ${resultado} voçê é estrangeiro.`
+            nacionalidade.innerHTML += `<p>Voçê nasceu em ${resultado}. Voçê é estrangeiro(a).<\p>`
         }
-
-        nacionalidade.innerHTML = `volte sempre`;
+        nacionalidade.innerHTML += `<p> volte sempre <\p>`;
        }
-       
     </script>
 </body>
 </html>
